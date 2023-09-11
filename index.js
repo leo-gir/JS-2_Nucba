@@ -53,7 +53,7 @@ const pizzas = [
 Utilizando métodos de array e iterando sobre el array de pizzas,
 realizar las siguientes actividades, imprimiendo en consola:
 
-a) Las pizzas que tengan un id impar.
+a)  Las pizzas que tengan un id impar.
 b) Responder: ¿Hay alguna pizza que valga menos de $600?
 c) El nombre de cada pizza con su respectivo precio.
 d) Todos los ingredientes de cada pizza (En cada iteración imprimir
@@ -97,8 +97,17 @@ logPizzaMenor600()
 //ACTIVIDAD C
 console.log('Actividad C')
 
+pizzas.forEach(pizza => {
+  console.log(`${pizza.nombre} => $${pizza.precio}`)
+})
+
 
 
 //ACTIVIDAD D
 console.log('Actividad D')
-
+pizzas.forEach(pizza =>{
+  console.log (`Ingredientes de la ${pizza.nombre}:`);
+  pizza.ingredientes.forEach(ingrediente =>{
+    console.log(ingrediente);
+  })
+})
